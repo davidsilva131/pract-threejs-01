@@ -29,10 +29,10 @@ const App = () => {
     //  const material = new THREE.MeshBasicMaterial({ color: 0x0f2c64 })
     //  const cube = new THREE.Mesh(geometry, material) 
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath('/public/draco/')
+    dracoLoader.setDecoderPath('./draco/')
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader)
-    gltfLoader.load('/public/models/camisa_01.gltf',
+    gltfLoader.load('./models/camisa_01.gltf',
       (gltf) => {
         scene.add(gltf.scene)
       }
