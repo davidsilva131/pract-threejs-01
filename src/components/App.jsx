@@ -15,7 +15,7 @@ const App = () => {
     scene.background = new THREE.Color(255, 255, 255);
     const camera = new THREE.PerspectiveCamera(25, width / height, 0.01, 1000);
     scene.add(camera);
-    camera.position.y = 10;
+    camera.position.y = 6;
     camera.position.z = 6;
     camera.position.x = 6;
 
@@ -29,7 +29,7 @@ const App = () => {
     //  const material = new THREE.MeshBasicMaterial({ color: 0x0f2c64 })
     //  const cube = new THREE.Mesh(geometry, material) 
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath('../../node_modules/three/examples/jsm/libs/draco/')
+    dracoLoader.setDecoderPath('/public/draco/')
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader)
     gltfLoader.load('/public/models/camisa_01.gltf',
